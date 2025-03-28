@@ -1,0 +1,73 @@
+<div class="alert-popup" [ngClass]="{'visible': isPopupVisible}">
+  <img src="/images/close-icon.svg" alt="Cerrar" class="close-icon" (click)="closePopup()">
+
+  {{popUpDeleted}}
+</div>
+
+
+<div *ngIf="user$ | async as user" 
+     class="shadow-sm p-4 rounded bg-white text-dark"
+     style="max-width: 400px; margin: 20px auto;" role="alert">
+  
+  <!-- Icono y mensaje -->
+  <div class="d-flex align-items-center mb-2">
+    <div class="me-3">
+      <i class="bi bi-person-circle fs-3 text-primary"></i>
+    </div>
+    <div class="flex-grow-1">
+      <p class="mb-1">¡Hola, <strong>{{ user.email }}</strong>!</p>
+      <small class="text-muted">Estás en el área de administración</small>
+    </div>
+  </div>
+
+  <!-- Botón para cerrar sesión -->
+  <button class="btn btn-outline-danger btn-sm w-100 mt-2" (click)="signOut()">
+    <i class="bi bi-box-arrow-right"></i> Cerrar sesión
+  </button>
+</div>
+
+<div class="alert-popup" [ngClass]="{'visible': isPopupVisible}">
+  <img src="/images/close-icon.svg" alt="Cerrar" class="close-icon" (click)="closePopup()">
+
+  {{popUpDeleted}}
+</div>
+
+
+
+
+<div class="container">
+  <h1 class="main-title">Lista de artículos</h1>
+ 
+
+  <div>
+    <div class="row">
+      <a  *ngIf="user$ | async as user"     class="btn btn-sm btn-info p-2" (click)="createArticle()">Crear artículo</a>
+      <div
+        *ngFor="let article of articles"
+        class="flex-column flex-column flex-column--50 relative-position mt-15"
+      >
+        <div
+          class="article-box__img"
+          [style.background-image]="'url(/images/' + article.image + ')'"
+        >
+          <div
+            class="article-box__description main-paragraph main-paragraph--white mt-15"
+          >
+            <h3>{{ article.title }}</h3>
+            <div class="article-box__text">
+              <p>{{ article.excerpt }}</p>
+              <div class="article-box__small">
+                  <a class="btn btn-sm btn-info p-2 mx-2 my-2 " (click)="openArticle(article)">Leer artículo</a>
+                  <a *ngIf="user$ | async as user"   class="btn btn-sm btn-info p-2 mx-2 my-2" (click)="editArticle(article)">Editar artículo</a>
+                  <a *ngIf="user$ | async as user"   class="btn btn-sm btn-info p-2 mx-2 my-2" (click)="deleteArticle(article)">Borrar artículo</a>
+
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

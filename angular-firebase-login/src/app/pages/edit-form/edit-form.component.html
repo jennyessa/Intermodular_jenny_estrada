@@ -1,0 +1,44 @@
+<div class="container">
+    <h1 class="main-title text-center my-4">Editar Artículo</h1>
+
+    <div class="content-box">
+        <form>
+            <div class="row mb-3">
+                <div class="flex-column--15">
+                    <label for="title">Título</label> 
+                </div>  
+                <div class="flex-column--85">
+                    <input type="text" id="title" class="form-control w-100" [(ngModel)]="title" name="title" placeholder="Editar título..." required>
+                </div>                          
+            </div>      
+
+            <div class="row mb-3">
+                <div class="flex-column--15">
+                    <label for="text">Texto</label> 
+                </div>  
+                <div class="flex-column--85">
+                    <textarea id="text" class="form-control w-100" [(ngModel)]="text" name="text" placeholder="Editar texto..." required></textarea>
+                </div> 
+                <div class="flex-column--15">
+                    <label for="text">Excerpt</label> 
+                </div>
+                <div class="flex-column--85">
+                    <textarea id="text" class="form-control w-100" [(ngModel)]="excerpt" name="text" placeholder="Editar texto..." required></textarea>
+                </div>                          
+            </div> 
+
+            <div class="row mb-3">
+                <div class="btn btn-info w-100">
+                    <label>Subir imagen</label>
+                </div>  
+                <div class="flex-column--85">
+                   <!-- <input type="file" (change)="onFileSelected($event)">-->
+                </div> 
+            </div>
+
+            <button class="btn btn-primary mt-4" type="submit"   (click)="editArticle()">Guardar cambios</button>
+        </form>
+    </div>
+</div>
+
+  

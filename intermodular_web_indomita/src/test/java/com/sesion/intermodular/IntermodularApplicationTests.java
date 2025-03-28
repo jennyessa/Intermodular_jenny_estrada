@@ -1,0 +1,13 @@
+package com.sesion.intermodular;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class IntermodularApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

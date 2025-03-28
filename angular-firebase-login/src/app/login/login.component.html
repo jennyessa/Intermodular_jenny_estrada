@@ -1,0 +1,33 @@
+
+<h2 class="main-title text-center my-4">Acceder</h2>
+    <div class="container">
+        <div class="content-box">
+            <form [formGroup]="form!" (ngSubmit)="onSubmit()">
+                <div class="form-group row mb-3">
+                    <div class="flex-column--15">
+                        <label for="email">Usuario</label>
+                    </div>  
+                    <div class="flex-column--85">
+                        <input type="email" placeholder="Introduce email"    formControlName="email" id="email" class="form-control w-100" />
+                    </div>
+                </div>
+    
+                <div class="form-group row mb-3">
+                    <div class="flex-column--15">
+                        <label for="password">Contraseña</label>
+                    </div>  
+                    <div class="flex-column--85">
+                        <input type="password" placeholder="Introduce contraseña..."     formControlName="password" id="password" class="form-control w-100 " />
+                    </div>
+                </div>
+    
+                <div class="form-group">
+                    <button class="btn btn-primary mt-4">Acceder como administrador</button>
+                 
+                </div>
+    
+               
+            </form>
+        </div>
+    </div>
+    

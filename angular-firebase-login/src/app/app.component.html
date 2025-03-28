@@ -1,0 +1,31 @@
+<nav>
+    <div class="header-logo" >
+       <img class="responsive-image" src="./images/logo_indomita.png" alt="logo indomita" style="width: 180px; height: auto; margin-bottom: 15px;">
+     </div>
+     <div>
+         <ul class="nav-links"> 
+              <li *ngFor="let page of appPages" [routerLink]="page.url">
+                  {{page.title}}
+              </li>
+          </ul>  
+     </div>
+  </nav>
+  
+  <router-outlet />
+  
+  <div class="footer-container">
+    <h3>INDOMITA CREATIVA</h3>
+        <p>Contacto:</p>
+        <p>indomita</p>
+            <div class="footer-container__row">
+                <p>
+                    <a href="#">Política de privacidad</a>
+                </p>
+                <p>
+                    <a href="#">Política de cookies</a>
+                </p> 
+                <p>
+                    <a href="#">Aviso legaL</a>
+                </p>        
+            </div>
+    </div>  

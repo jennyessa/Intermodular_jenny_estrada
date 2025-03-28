@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="main-title">DESCUBRE EL ARTE EN CADA PÁGINA</h1>
+
+  <!--
+  <div
+    class="article-img main-paragraph--blue main-paragraph"
+    [style.background-image]="'url(/images/' + article!.image + ')'"
+  >
+    <img class="responsive-image" />
+    <div class="article-box"></div>
+  </div>
+  -->
+  <div class="article-description main-paragraph--blue">
+    
+    <h1>{{ article!.title }}</h1>
+    <p class="main-paragraph">
+      {{ article!.text }}
+    </p>
+    <!-- <button class="primary-button" (click)="toggleFavorite(article!)">
+        {{ isFavorite ? 'Eliminar de Favoritos' : 'Añadir a Favoritos' }}
+    </button>
+   <p *ngIf="addedToFavorites" style="color: green;">Añadido a favoritos ✅</p> -->
+
+
+  </div>
+
+  <div class="article-description"></div>
+</div>
